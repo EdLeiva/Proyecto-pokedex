@@ -1,0 +1,40 @@
+$rojo: #CC0000;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  background: $rojo;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+
+  .logo { font-size: 1.4rem; font-weight: 700; }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    transition: background .2s;
+    &:hover { background: rgba(255,255,255,.2); }
+  }
+}
+
+.contador-fav {
+  margin-left: 1rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  background: #374151;
+  color: #9ca3af;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.25s ease;
+
+  &.activo {
+    background: #fbbf24;
+    color: #1f2937;
+    transform: scale(1.05);
+  }
+}
