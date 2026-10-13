@@ -44,6 +44,14 @@ export class PokemonCard {
 
   onImgError(event: Event): void {
     const img = event.target as HTMLImageElement;
-    const spriteNormal = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${this.id()}.png`;
+    const spriteNormal = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${this.id}.png`;
+  
+    if (img.src !== spriteNormal) {
+      img.src = spriteNormal;
+  }else {
+    img.src = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/0.png';
+    img.onerror = null; 
+
+    }  
   }
 }
